@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
@@ -16,3 +17,15 @@ code {
 .picture {
   height: 100px;
 }
+
+.tabela th{
+  border: 2px solid black;
+  font-size: 1.2em;
+  width: 25px;
+  padding: 5px;
+  
+  
+}
+/* .tabela td{
+  border: 2px solid black;
+} */
