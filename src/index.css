@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   
+  
 }
 
 code {
@@ -15,17 +16,80 @@ code {
 
 
 .picture {
-  height: 100px;
+  height: 120px;
+  width: 100px;
+  border-radius: 3px;
+  
+  
+}
+
+
+.tabela{
+  background-color: pink;
+  display: table;
+  margin: auto;
+  margin-top: 20px;
+  border-collapse:collapse;
+  border-spacing: 10px;
+  margin-bottom: 120px;
+  padding: 20px;
+  
+
+}
+
+tbody:before {
+  content:"@";
+  display:block;
+  line-height:10px;
+  text-indent:-99999px;
 }
 
 .tabela th{
-  border: 2px solid black;
+  background-color: salmon;
   font-size: 1.2em;
-  width: 25px;
-  padding: 5px;
+  width: 155px;
+  padding: 2px;
+  color: white;
   
   
+
 }
-/* .tabela td{
-  border: 2px solid black;
-} */
+
+
+
+.btn-delete{
+  background-color: salmon;
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.btn-delete:hover{
+  background-color: rgb(248, 100, 83);
+}
+
+.btn-container{
+  
+  display: flex;
+  width: 50%;
+  flex-direction: row;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.top-btn{
+  background-color: salmon;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px;
+  color: white;
+}
+
+
+
+.top-btn:hover{
+  background-color: rgb(248, 100, 83);
+}
+

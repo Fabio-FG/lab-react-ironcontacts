@@ -34,12 +34,27 @@ function App() {
     setContacts([...sortedContacts]);
   }
 
+
+  function deleteContact(contactId) {
+    const filteredContacts = contacts.filter((celeb) => {
+     
+      return celeb.id !== contactId;
+    })
+
+
+    
+    console.log("the celeb contacts", filteredContacts)
+    setContacts([...filteredContacts])
+  }
+
   return (
     <div className="App">
-      <button onClick={getRandom}>Add random</button>
+    <div className="btn-container">
 
-      <button onClick={sortAlphabetically}>Sort by Name</button>
-      <button onClick={sortPopularity}>Sort by Popularity</button>
+      <button className="top-btn" onClick={getRandom}>Add random</button>
+      <button className="top-btn" onClick={sortAlphabetically}>Sort by Name</button>
+      <button className="top-btn" onClick={sortPopularity}>Sort by Popularity</button>
+    </div>
 
       <table className="tabela">
         <thead>
@@ -47,16 +62,16 @@ function App() {
             <th>Picture</th>
             <th>Name</th>
             <th>Popularity</th>
+            
             <th>
-              Won <br /> Oscar
-            </th>
+              Won <br /> Oscar</th>
             <th>
-              Won <br />
-              Emmy
-            </th>
+              Won <br />Emmy</th>
+            <th>Actions</th>
           </tr>
         </thead>
-        {contacts.map((contactList) => {
+        {
+          contacts.map((contactList) => {
           return (
             <tbody>
               <tr>
@@ -72,6 +87,9 @@ function App() {
                 {/* This statement will show the cup if the wonOscar value is true */}
                 <td>{contactList.wonOscar && <span>🏆</span>}</td>
                 <td>{contactList.wonEmmy && <span>🏆</span>}</td>
+                <td><button 
+                className="btn-delete"
+                onClick={() =>  deleteContact(contactList.id)}>Delete</button></td>
               </tr>
             </tbody>
           );
